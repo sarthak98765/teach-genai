@@ -1,0 +1,16 @@
+plan/
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+.next/
+dist/
+.DS_Store
+.vscode/
+.idea/
+.claude/
+claude.md
+.claude/settings.local.json
