@@ -1,0 +1,150 @@
+{
+  "college": "National Institute of Technology, Tiruchirappalli",
+  "exam": "JEE Main",
+  "year": 2026,
+  "round": "Round 1",
+  "category": "General, Gender-Neutral",
+  "cutoffs": [
+    {
+      "program": "B.Tech Chemical Engineering",
+      "quota": "HS",
+      "opening_rank": 11289,
+      "closing_rank": 15322,
+      "source_url": "https://www.collegepravesh.com/cutoff/nit-trichy-cutoff-2026/"
+    },
+    {
+      "program": "B.Tech Civil Engineering",
+      "quota": "HS",
+      "opening_rank": 15104,
+      "closing_rank": 25480,
+      "source_url": "https://www.collegepravesh.com/cutoff/nit-trichy-cutoff-2026/"
+    },
+    {
+      "program": "B.Tech Computer Science and Engineering",
+      "quota": "HS",
+      "opening_rank": 1034,
+      "closing_rank": 3812,
+      "source_url": "https://www.collegepravesh.com/cutoff/nit-trichy-cutoff-2026/"
+    },
+    {
+      "program": "B.Tech Electrical and Electronics Engineering",
+      "quota": "HS",
+      "opening_rank": 5142,
+      "closing_rank": 7642,
+      "source_url": "https://www.collegepravesh.com/cutoff/nit-trichy-cutoff-2026/"
+    },
+    {
+      "program": "B.Tech Electronics and Communication Engineering",
+      "quota": "HS",
+      "opening_rank": 2285,
+      "closing_rank": 5055,
+      "source_url": "https://www.collegepravesh.com/cutoff/nit-trichy-cutoff-2026/"
+    },
+    {
+      "program": "B.Tech Instrumentation and Control Engineering",
+      "quota": "HS",
+      "opening_rank": 7852,
+      "closing_rank": 11816,
+      "source_url": "https://www.collegepravesh.com/cutoff/nit-trichy-cutoff-2026/"
+    },
+    {
+      "program": "B.Tech Mechanical Engineering",
+      "quota": "HS",
+      "opening_rank": 6360,
+      "closing_rank": 12311,
+      "source_url": "https://www.collegepravesh.com/cutoff/nit-trichy-cutoff-2026/"
+    },
+    {
+      "program": "B.Tech Metallurgical and Materials Engineering",
+      "quota": "HS",
+      "opening_rank": 18141,
+      "closing_rank": 24281,
+      "source_url": "https://www.collegepravesh.com/cutoff/nit-trichy-cutoff-2026/"
+    },
+    {
+      "program": "B.Tech Production Engineering",
+      "quota": "HS",
+      "opening_rank": 13052,
+      "closing_rank": 21470,
+      "source_url": "https://www.collegepravesh.com/cutoff/nit-trichy-cutoff-2026/"
+    },
+    {
+      "program": "B.Tech Chemical Engineering",
+      "quota": "OS",
+      "opening_rank": 6472,
+      "closing_rank": 11645,
+      "source_url": "https://www.collegepravesh.com/cutoff/nit-trichy-cutoff-2026/"
+    },
+    {
+      "program": "B.Tech Civil Engineering",
+      "quota": "OS",
+      "opening_rank": 10227,
+      "closing_rank": 15884,
+      "source_url": "https://www.collegepravesh.com/cutoff/nit-trichy-cutoff-2026/"
+    },
+    {
+      "program": "B.Tech Computer Science and Engineering",
+      "quota": "OS",
+      "opening_rank": 103,
+      "closing_rank": 1317,
+      "source_url": "https://www.collegepravesh.com/cutoff/nit-trichy-cutoff-2026/"
+    },
+    {
+      "program": "B.Tech Electrical and Electronics Engineering",
+      "quota": "OS",
+      "opening_rank": 3877,
+      "closing_rank": 4987,
+      "source_url": "https://www.collegepravesh.com/cutoff/nit-trichy-cutoff-2026/"
+    },
+    {
+      "program": "B.Tech Electronics and Communication Engineering",
+      "quota": "OS",
+      "opening_rank": 1819,
+      "closing_rank": 2938,
+      "source_url": "https://www.collegepravesh.com/cutoff/nit-trichy-cutoff-2026/"
+    },
+    {
+      "program": "B.Tech Instrumentation and Control Engineering",
+      "quota": "OS",
+      "opening_rank": 5878,
+      "closing_rank": 9030,
+      "source_url": "https://www.collegepravesh.com/cutoff/nit-trichy-cutoff-2026/"
+    },
+    {
+      "program": "B.Tech Mechanical Engineering",
+      "quota": "OS",
+      "opening_rank": 3558,
+      "closing_rank": 7872,
+      "source_url": "https://www.collegepravesh.com/cutoff/nit-trichy-cutoff-2026/"
+    },
+    {
+      "program": "B.Tech Metallurgical and Materials Engineering",
+      "quota": "OS",
+      "opening_rank": 11529,
+      "closing_rank": 17407,
+      "source_url": "https://www.collegepravesh.com/cutoff/nit-trichy-cutoff-2026/"
+    },
+    {
+      "program": "B.Tech Production Engineering",
+      "quota": "OS",
+      "opening_rank": 11685,
+      "closing_rank": 17114,
+      "source_url": "https://www.collegepravesh.com/cutoff/nit-trichy-cutoff-2026/"
+    },
+    {
+      "program": "B.Arch Architecture",
+      "quota": "HS",
+      "opening_rank": 198,
+      "closing_rank": 444,
+      "source_url": "https://www.collegepravesh.com/cutoff/nit-trichy-cutoff-2026/"
+    },
+    {
+      "program": "B.Arch Architecture",
+      "quota": "OS",
+      "opening_rank": 45,
+      "closing_rank": 205,
+      "source_url": "https://www.collegepravesh.com/cutoff/nit-trichy-cutoff-2026/"
+    }
+  ],
+  "notes": null
+}
