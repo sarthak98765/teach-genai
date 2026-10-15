@@ -1,0 +1,7 @@
+openai
+pydantic
+python-dotenv
+ipykernel
+httpx
+crawl4ai
+mistralai
