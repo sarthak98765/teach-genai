@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Day 06.4 Streaming</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 16px; }
+    .cols { display: flex; gap: 16px; }
+    .col { flex: 1; border: 1px solid #ccc; border-radius: 8px; padding: 12px; min-height: 260px; }
+    .col h3 { margin-top: 0; }
+    .meta { color: #868e96; font-size: 13px; }
+    .out { white-space: pre-wrap; }
+    form { display: flex; gap: 8px; margin: 16px 0; }
+    input { flex: 1; padding: 8px; font-size: 16px; }
+    button { padding: 8px 16px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h2>Streaming vs non-streaming</h2>
+  <p>Both sides ask the same question at the same time. Watch which one you can start reading first.</p>
+  <form id="form">
+    <input id="msg" value="Explain RAG to a web developer in about 150 words.">
+    <button>Ask both</button>
+  </form>
+  <div class="cols">
+    <div class="col"><h3>Non-streaming</h3><div class="meta" id="m1"></div><div class="out" id="o1"></div></div>
+    <div class="col"><h3>Streaming (SSE)</h3><div class="meta" id="m2"></div><div class="out" id="o2"></div></div>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+
+    async function nonStreaming(message) {
+      $("o1").textContent = ""; $("m1").textContent = "waiting...";
+      const start = performance.now();
+      const res = await fetch("/chat?message=" + encodeURIComponent(message));
+      const data = await res.json();
+      $("o1").textContent = data.reply;
+      $("m1").textContent = `first words at ${Math.round(performance.now() - start)} ms (= total)`;
+    }
+
+    function streaming(message) {
+      $("o2").textContent = ""; $("m2").textContent = "waiting...";
+      const start = performance.now();
+      let ttft = null;
+      // EventSource is the browser's built-in SSE client
+      const es = new EventSource("/chat/stream?message=" + encodeURIComponent(message));
+      es.addEventListener("delta", (e) => {
+        if (ttft === null) { ttft = Math.round(performance.now() - start); $("m2").textContent = `first words at ${ttft} ms`; }
+        $("o2").textContent += JSON.parse(e.data).text;
+      });
+      es.addEventListener("done", (e) => {
+        const d = JSON.parse(e.data);
+        $("m2").textContent = `first words at ${ttft} ms · total ${Math.round(performance.now() - start)} ms · ${d.output_tokens} tokens`;
+        es.close();  // otherwise EventSource reconnects automatically
+      });
+      es.addEventListener("error", (e) => {
+        if (e.data) $("m2").textContent = "Error: " + JSON.parse(e.data).message;
+        es.close();
+      });
+    }
+
+    $("form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const message = $("msg").value;
+      nonStreaming(message);
+      streaming(message);
+    });
+  </script>
+</body>
+</html>
