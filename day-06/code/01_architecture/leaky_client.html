@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DON'T DO THIS</title>
+</head>
+<body>
+  <!--
+    The ANTI-pattern: the browser calls the model provider directly.
+    Do NOT put a real key here. This file exists only to read in class.
+
+    Problems:
+      1. The key ships to every visitor. View Source or DevTools -> Network shows it.
+         Anyone can copy it and spend your money.
+      2. No login check, no per-user budget, no rate limit: the browser is in charge.
+      3. The system prompt is visible and editable by the user.
+      4. No server-side logging, no place to add RAG, tools or a database.
+
+    The fix is main.py: the browser calls OUR /chat, and only the backend holds the key.
+  -->
+  <script>
+    const OPENAI_API_KEY = "sk-...";  // <- visible to everyone who opens the page
+
+    fetch("https://api.openai.com/v1/responses", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer " + OPENAI_API_KEY,
+      },
+      body: JSON.stringify({
+        model: "gpt-4o-mini",
+        instructions: "You are a friendly tutor.",   // <- the user can change this too
+        input: "Explain RAG in simple words",
+      }),
+    });
+  </script>
+</body>
+</html>

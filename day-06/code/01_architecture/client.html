@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Day 06.1 Chat</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 40px auto; padding: 0 16px; }
+    #log { border: 1px solid #ccc; border-radius: 8px; padding: 12px; min-height: 240px; }
+    .user { color: #1971c2; margin: 8px 0; }
+    .ai { color: #2f9e44; margin: 8px 0; }
+    .meta { color: #868e96; font-size: 12px; margin: -4px 0 12px; }
+    .error { color: #e03131; margin: 8px 0; }
+    form { display: flex; gap: 8px; margin-top: 12px; }
+    input { flex: 1; padding: 8px; font-size: 16px; }
+    button { padding: 8px 16px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h2>Client → Backend → Model API</h2>
+  <p>This page is the <b>client</b>. It only talks to <code>/chat</code> on our backend. Open DevTools → Network and look: no API key anywhere.</p>
+  <div id="log"></div>
+  <form id="form">
+    <input id="msg" placeholder="Explain RAG in simple words" autocomplete="off">
+    <button>Send</button>
+  </form>
+
+  <script>
+    const log = document.getElementById("log");
+    const input = document.getElementById("msg");
+
+    function add(cls, text) {
+      const p = document.createElement("p");
+      p.className = cls;
+      p.textContent = text;
+      log.appendChild(p);
+    }
+
+    document.getElementById("form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const message = input.value.trim() || "Explain RAG in simple words";
+      input.value = "";
+      add("user", "You: " + message);
+
+      const start = performance.now();
+      // The client calls OUR backend, never the model provider directly
+      const res = await fetch("/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message }),
+      });
+      const data = await res.json();
+      const totalMs = Math.round(performance.now() - start);
+
+      if (!res.ok) {
+        add("error", "Error " + res.status + ": " + JSON.stringify(data.detail));
+        return;
+      }
+      add("ai", "AI: " + data.reply);
+      add("meta", `${data.model} · ${data.input_tokens} in / ${data.output_tokens} out tokens · model ${data.model_ms} ms · round trip ${totalMs} ms`);
+    });
+  </script>
+</body>
+</html>
