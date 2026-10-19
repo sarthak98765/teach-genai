@@ -1,0 +1,220 @@
+[
+  {
+    "file": "invoice_01.png",
+    "expected": {
+      "vendor_name": "Sharma Electronics",
+      "invoice_number": "INV-2026-0412",
+      "invoice_date": "2026-09-14",
+      "currency": "INR",
+      "line_items": [
+        {
+          "description": "USB-C cable 1m",
+          "quantity": 3,
+          "unit_price": 299.0,
+          "amount": 897.0
+        },
+        {
+          "description": "Wireless mouse",
+          "quantity": 1,
+          "unit_price": 899.0,
+          "amount": 899.0
+        }
+      ],
+      "subtotal": 1796.0,
+      "tax": 323.28,
+      "total": 2119.28
+    },
+    "expected_rule_errors": []
+  },
+  {
+    "file": "invoice_02.png",
+    "expected": {
+      "vendor_name": "Kapoor Stationers",
+      "invoice_number": "KS/889",
+      "invoice_date": "2026-10-02",
+      "currency": "INR",
+      "line_items": [
+        {
+          "description": "A4 paper ream",
+          "quantity": 5,
+          "unit_price": 320.0,
+          "amount": 1600.0
+        },
+        {
+          "description": "Gel pens (box of 10)",
+          "quantity": 2,
+          "unit_price": 150.0,
+          "amount": 300.0
+        },
+        {
+          "description": "Stapler",
+          "quantity": 1,
+          "unit_price": 245.0,
+          "amount": 245.0
+        },
+        {
+          "description": "Sticky notes",
+          "quantity": 6,
+          "unit_price": 40.0,
+          "amount": 240.0
+        }
+      ],
+      "subtotal": 2385.0,
+      "tax": 286.2,
+      "total": 2671.2
+    },
+    "expected_rule_errors": []
+  },
+  {
+    "file": "invoice_03.png",
+    "expected": {
+      "vendor_name": "Mehta Hardware",
+      "invoice_number": "MH-7731",
+      "invoice_date": "2026-08-27",
+      "currency": "INR",
+      "line_items": [
+        {
+          "description": "Hammer",
+          "quantity": 2,
+          "unit_price": 385.0,
+          "amount": 770.0
+        },
+        {
+          "description": "Screws (pack of 100)",
+          "quantity": 3,
+          "unit_price": 120.0,
+          "amount": 360.0
+        },
+        {
+          "description": "Measuring tape 5m",
+          "quantity": 1,
+          "unit_price": 210.0,
+          "amount": 210.0
+        }
+      ],
+      "subtotal": 1340.0,
+      "tax": 241.2,
+      "total": 1581.2
+    },
+    "expected_rule_errors": []
+  },
+  {
+    "file": "invoice_04.png",
+    "expected": {
+      "vendor_name": "Gupta Caterers",
+      "invoice_number": "GC-0098",
+      "invoice_date": "2026-09-30",
+      "currency": "INR",
+      "line_items": [
+        {
+          "description": "Veg thali",
+          "quantity": 20,
+          "unit_price": 180.0,
+          "amount": 3600.0
+        },
+        {
+          "description": "Masala chai",
+          "quantity": 40,
+          "unit_price": 25.0,
+          "amount": 1000.0
+        }
+      ],
+      "subtotal": 4600.0,
+      "tax": 230.0,
+      "total": 4930.0
+    },
+    "expected_rule_errors": [
+      "total_mismatch"
+    ]
+  },
+  {
+    "file": "invoice_05.pdf",
+    "expected": {
+      "vendor_name": "CloudNine Software LLC",
+      "invoice_number": "CN-2026-117",
+      "invoice_date": "2026-10-05",
+      "currency": "USD",
+      "line_items": [
+        {
+          "description": "Pro plan, 10 seats (monthly)",
+          "quantity": 10,
+          "unit_price": 12.0,
+          "amount": 120.0
+        },
+        {
+          "description": "Priority support",
+          "quantity": 1,
+          "unit_price": 49.0,
+          "amount": 49.0
+        }
+      ],
+      "subtotal": 169.0,
+      "tax": 0.0,
+      "total": 169.0
+    },
+    "expected_rule_errors": []
+  },
+  {
+    "file": "invoice_06.png",
+    "expected": {
+      "vendor_name": "Fresh Basket Grocers",
+      "invoice_number": "FB-55120",
+      "invoice_date": "2026-10-11",
+      "currency": "INR",
+      "line_items": [
+        {
+          "description": "Basmati rice 5kg",
+          "quantity": 1,
+          "unit_price": 649.0,
+          "amount": 649.0
+        },
+        {
+          "description": "Toor dal 1kg",
+          "quantity": 2,
+          "unit_price": 168.0,
+          "amount": 336.0
+        },
+        {
+          "description": "Sunflower oil 1L",
+          "quantity": 3,
+          "unit_price": 145.0,
+          "amount": 435.0
+        },
+        {
+          "description": "Atta 10kg",
+          "quantity": 1,
+          "unit_price": 455.0,
+          "amount": 455.0
+        },
+        {
+          "description": "Sugar 1kg",
+          "quantity": 2,
+          "unit_price": 48.0,
+          "amount": 96.0
+        },
+        {
+          "description": "Tea 500g",
+          "quantity": 1,
+          "unit_price": 290.0,
+          "amount": 290.0
+        },
+        {
+          "description": "Paneer 200g",
+          "quantity": 4,
+          "unit_price": 95.0,
+          "amount": 380.0
+        },
+        {
+          "description": "Curd 400g",
+          "quantity": 2,
+          "unit_price": 45.0,
+          "amount": 90.0
+        }
+      ],
+      "subtotal": 2731.0,
+      "tax": 136.55,
+      "total": 2867.55
+    },
+    "expected_rule_errors": []
+  }
+]
