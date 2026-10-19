@@ -1,0 +1,7 @@
+{
+  "field_accuracy": 0.958,
+  "doc_exact_match": 0.833,
+  "rules_correct": 1.0,
+  "p50_ms": 1999,
+  "usd_per_doc": 0.000193
+}
