@@ -1,0 +1,7 @@
+openai
+mistralai
+python-dotenv
+pymupdf
+numpy
+pandas
+ipykernel
