@@ -14,3 +14,6 @@ dist/
 .claude/
 claude.md
 .claude/settings.local.json
+kanoon-ai/data/
+day-09/code/cache/*.wav
+rag-days-09-14.md
