@@ -2,7 +2,7 @@ pymupdf
 pymupdf4llm
 pdfplumber
 pytesseract
-markitdown[docx,html]
+markitdown[docx]
 beautifulsoup4
 docling
 faster-whisper
@@ -10,3 +10,6 @@ av<17
 pandas
 tabulate
 ipykernel
+langchain-text-splitters
+tiktoken
+sentence-transformers
