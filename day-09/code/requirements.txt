@@ -1,0 +1,12 @@
+pymupdf
+pymupdf4llm
+pdfplumber
+pytesseract
+markitdown[docx,html]
+beautifulsoup4
+docling
+faster-whisper
+av<17
+pandas
+tabulate
+ipykernel

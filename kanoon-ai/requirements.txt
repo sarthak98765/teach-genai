@@ -1,0 +1,4 @@
+pymupdf
+httpx
+tiktoken
+langchain-text-splitters
