@@ -31,7 +31,7 @@ ACTS = {
 
 DOWNLOAD_TIMEOUT = 60
 
-# A section longer than this is split again, with overlap.
+# Fixed-size chunking: every chunk is this many tokens, whatever the structure, with overlap.
 TOKENIZER = "o200k_base"
-MAX_CHUNK_TOKENS = 800
+CHUNK_TOKENS = 500
 CHUNK_OVERLAP_TOKENS = 100

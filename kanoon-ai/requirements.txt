@@ -2,4 +2,3 @@ httpx
 mistralai
 python-dotenv
 tiktoken
-langchain-text-splitters

@@ -8,7 +8,7 @@ The project grows one class at a time (plan: `../rag-days-09-14.md`).
 
 | Day | Adds |
 |---|---|
-| **09** | `data_ingestion/`: PDF → Mistral OCR → cleaning → one chunk per section |
+| **09** | `data_ingestion/`: PDF → Mistral OCR → cleaning → fixed-size chunks |
 | 10 | embeddings + vector database |
 | 11–12 | hybrid search, reranking, answers with citations, `/ask` API |
 | 13–14 | evals and observability |
@@ -34,28 +34,27 @@ OCR costs money, so its result is cached: delete `data/ocr/bns.json` to OCR agai
 | `config.py` | the Acts (title, download URL, page we cite, date of the text), `.env`, paths, OCR model, chunk limits |
 | `data_extraction.py` | download the PDF once, OCR it with Mistral (running headers and footers removed) → `data/ocr/<act>.json` |
 | `cleaning.py` | Day 9 cleaning: NFKC, quotes, invisible characters, image tags, page numbers, hyphenation, whitespace → `data/cleaned/<act>.json` |
-| `chunking.py` | one chunk per section, a section over 800 tokens is split again with 100 tokens of overlap → `data/chunks/<act>.jsonl` |
+| `chunking.py` | fixed-size chunks: 500 tokens with 100 tokens of overlap, cut across the whole Act → `data/chunks/<act>.jsonl` |
 | `logger.py` | `custom_logger` |
 
 `data/` is git-ignored and re-created by the scripts.
 
-## How sections are found
+## How chunks are cut
 
-- Everything before `CHAPTER I` (the Gazette masthead) is skipped.
-- `CHAPTER VI` + the upper-case line(s) under it → the chapter, e.g. `CHAPTER VI - OF OFFENCES AFFECTING THE HUMAN BODY`.
-- **A line starting `103.`** → a new section, but only if 103 is the *next* number. Sections are numbered in order, so a wrapped line that happens to start with a number can't start a fake one.
+- The cleaned pages are joined and turned into tokens (`o200k_base`, via `tiktoken`).
+- A window of 500 tokens is cut, then the window moves on by 400, so neighbouring chunks share 100 tokens.
+- Chapters and sections are ignored, so a cut can land in the middle of a section. Overlap makes it less likely that a sentence is lost at the edge.
 
 ## A chunk
 
 ```json
 {
-  "chunk_id": "bns::s103::0",
+  "chunk_id": "bns::60",
   "act": "bns",
-  "breadcrumb": "Bharatiya Nyaya Sanhita, 2023 > CHAPTER VI - OF OFFENCES AFFECTING THE HUMAN BODY > Section 103",
-  "unit": "Section 103",
-  "page": 34,
-  "text": "103. (1) Whoever commits murder shall be punished with death or imprisonment for life, ...",
-  "tokens": 98,
+  "breadcrumb": "Bharatiya Nyaya Sanhita, 2023",
+  "page": 33,
+  "text": "right of private defence, lays hold of A to prevent him from doing so. ...",
+  "tokens": 500,
   "source_url": "https://www.indiacode.nic.in/handle/123456789/20062",
   "as_of": "2023-12-25"
 }
@@ -63,4 +62,4 @@ OCR costs money, so its result is cached: delete `data/ocr/bns.json` to OCR agai
 
 - `chunk_id` is stable, so running ingestion again overwrites chunks instead of duplicating them.
 - `breadcrumb` is the free version of contextual retrieval: on Day 10 we embed `breadcrumb + text`.
-- `page` is the PDF page where the section starts, for citations.
+- `page` is the PDF page where the chunk starts, for citations.
