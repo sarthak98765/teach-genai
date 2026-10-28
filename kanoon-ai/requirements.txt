@@ -1,4 +1,6 @@
 httpx
 mistralai
+openai
 python-dotenv
+qdrant-client
 tiktoken
