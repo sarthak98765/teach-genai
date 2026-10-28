@@ -6,6 +6,7 @@ ROOT = Path(__file__).parent
 load_dotenv(ROOT / ".env")
 
 MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY", "")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 OCR_MODEL = "mistral-ocr-latest"  # checked 2026-10-24: https://docs.mistral.ai/capabilities/document_ai/basic_ocr/
 OCR_TIMEOUT_MS = 900_000
 
@@ -15,6 +16,7 @@ RAW_DIR = DATA_DIR / "raw"          # downloaded PDFs
 OCR_DIR = DATA_DIR / "ocr"          # Mistral OCR pages (cached: OCR costs money)
 CLEAN_DIR = DATA_DIR / "cleaned"    # cleaned pages
 CHUNKS_DIR = DATA_DIR / "chunks"    # final chunks
+QDRANT_DIR = DATA_DIR / "qdrant"    # vector DB (Qdrant local mode)
 
 # One entry per Act. `url` is where we download from, `official` is the page we cite,
 # `as_of` is the date of the text we index.
@@ -35,3 +37,9 @@ DOWNLOAD_TIMEOUT = 60
 TOKENIZER = "o200k_base"
 CHUNK_TOKENS = 500
 CHUNK_OVERLAP_TOKENS = 100
+
+# Embeddings + vector DB. Change the model -> re-index every Act.
+EMBED_MODEL = "text-embedding-3-small"  # checked 2026-10-26: https://developers.openai.com/api/docs/guides/embeddings
+EMBED_DIMENSIONS = 1536
+EMBED_BATCH = 100                       # texts per embeddings call
+COLLECTION = "kanoon"                   # one Qdrant collection, every Act in it, filtered by `act`

@@ -16,3 +16,5 @@ claude.md
 .claude/settings.local.json
 day-09/code/cache/*.wav
 rag-days-09-14.md
+day-10/code/cache/
+kanoon-ai/data_ingestion/data/qdrant/

@@ -1,0 +1,12 @@
+openai
+python-dotenv
+numpy
+pandas
+matplotlib
+scikit-learn
+sentence-transformers
+tiktoken
+faiss-cpu
+qdrant-client
+pinecone
+ipykernel
