@@ -16,6 +16,7 @@ RAW_DIR = DATA_DIR / "raw"          # downloaded PDFs
 OCR_DIR = DATA_DIR / "ocr"          # Mistral OCR pages (cached: OCR costs money)
 CLEAN_DIR = DATA_DIR / "cleaned"    # cleaned pages
 CHUNKS_DIR = DATA_DIR / "chunks"    # final chunks
+EMBEDDINGS_DIR = DATA_DIR / "embeddings"  # vectors saved to disk, to inspect without Qdrant
 QDRANT_DIR = DATA_DIR / "qdrant"    # vector DB (Qdrant local mode)
 
 # One entry per Act. `url` is where we download from, `official` is the page we cite,
@@ -42,4 +43,6 @@ CHUNK_OVERLAP_TOKENS = 100
 EMBED_MODEL = "text-embedding-3-small"  # checked 2026-10-26: https://developers.openai.com/api/docs/guides/embeddings
 EMBED_DIMENSIONS = 1536
 EMBED_BATCH = 100                       # texts per embeddings call
+QDRANT_URL = os.getenv("QDRANT_URL", "")          # Qdrant Cloud or Docker URL; empty -> local mode in QDRANT_DIR
+QDRANT_API_KEY = os.getenv("QDRANT_API_KEY", "")  # Qdrant Cloud only (checked 2026-10-29: https://qdrant.tech/documentation/cloud-quickstart/)
 COLLECTION = "kanoon"                   # one Qdrant collection, every Act in it, filtered by `act`
