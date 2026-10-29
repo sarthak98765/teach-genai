@@ -1,0 +1,7 @@
+openai
+python-dotenv
+numpy
+pandas
+tiktoken
+qdrant-client
+ipykernel

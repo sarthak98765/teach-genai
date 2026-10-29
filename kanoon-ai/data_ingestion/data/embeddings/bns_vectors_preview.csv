@@ -14,14 +14,14 @@ bns::11,7,dies of hunger. Both A and B are guilty of the murder of Z. ,0.0542,0.
 bns::12,8,"without the consent of the offender, commute any punishment ",0.0197,0.0163,0.0106,0.0370,0.0128,-0.0043,-0.0306,-0.0282,...,-0.0115,1.000
 bns::13,8,", in default of payment of the fine, the offender shall suff",-0.0232,0.0251,0.0370,0.0330,0.0094,-0.0002,-0.0034,-0.0273,...,0.0392,1.000
 bns::14,9,"before the expiration of one month of the imprisonment, A wi",0.0149,0.0317,0.0370,0.0347,0.0063,0.0094,-0.0234,-0.0391,...,0.0406,1.000
-bns::15,10,may have committed the offence of voluntarily causing hurt t,0.0468,0.0428,0.0638,0.0690,0.0020,0.0352,-0.0154,-0.0178,...,0.0106,1.000
+bns::15,10,may have committed the offence of voluntarily causing hurt t,0.0469,0.0428,0.0638,0.0689,0.0019,0.0352,-0.0154,-0.0178,...,0.0106,1.000
 bns::16,10,periods; and when the imprisonment awarded shall exceed thre,0.0311,0.0163,0.0353,0.0510,0.0019,0.0130,-0.0128,-0.0228,...,0.0036,1.000
 bns::17,11,"jurisdiction to pass such judgment or order, provided the pe",0.0420,0.0266,-0.0281,0.0750,0.0389,-0.0202,-0.0415,-0.0211,...,0.0135,1.000
 bns::18,11,the risk of doing the act with the knowledge that it was lik,0.0629,0.0148,-0.0073,0.0320,0.0050,0.0066,-0.0273,-0.0024,...,0.0186,1.000
 bns::19,12,"be likely to cause death or grievous hurt, done by consent. ",0.0616,0.0332,-0.0332,0.0704,-0.0178,-0.0199,-0.0350,-0.0008,...,0.0175,1.000
 bns::20,12,"be intended by the doer to cause, to any person, above eight",0.0595,0.0487,-0.0047,0.0708,-0.0073,-0.0100,-0.0374,-0.0119,...,-0.0060,1.000
 bns::21,12,of anything which the person doing it knows to be likely to ,0.0447,0.0423,-0.0048,0.0920,-0.0032,-0.0041,-0.0166,-0.0016,...,0.0101,1.000
-bns::22,13,good faith for the purpose of saving the life of the woman) ,0.0386,0.0678,-0.0022,0.0834,0.0070,-0.0114,-0.0250,0.0032,...,0.0114,1.000
+bns::22,13,good faith for the purpose of saving the life of the woman) ,0.0386,0.0679,-0.0022,0.0834,0.0070,-0.0113,-0.0250,0.0032,...,0.0114,1.000
 bns::23,14,. A fires at the tiger knowing it to be likely that the shot,0.0557,0.0413,-0.0113,0.0793,0.0224,0.0033,-0.0527,0.0292,...,0.0078,1.000
 bns::24,14,"person doing the act did not of his own accord, or from a re",0.0674,0.0376,-0.0069,0.0693,0.0280,-0.0084,-0.0305,0.0217,...,0.0107,1.000
 bns::25,15,"certain offence, is not that offence, by reason of the youth",0.0673,0.0335,0.0013,0.0572,0.0155,-0.0056,-0.0380,0.0228,...,-0.0046,1.000
@@ -29,8 +29,8 @@ bns::26,15,1.-A person is not deprived of the right of private defence ,0.0627,0
 bns::27,16,When right of private defence of property extends to causing,0.0466,0.0558,0.0370,0.0402,0.0099,0.0125,-0.0301,0.0069,...,-0.0227,1.000
 bns::28,16,"section 37, to the voluntary causing to the wrong-doer of an",0.0710,0.0432,0.0363,0.0773,-0.0017,0.0098,-0.0017,0.0101,...,0.0052,1.000
 bns::29,17,(b) engages with one or more other person or persons in any ,0.0423,-0.0021,0.0016,0.0699,0.0032,0.0133,-0.0004,0.0146,...,0.0312,1.000
-bns::30,17,igates B to murder C. B refuses to do so. A is guilty of abe,0.0459,0.0294,-0.0051,0.0435,-0.0010,0.0205,-0.0082,0.0079,...,0.0177,1.000
-bns::31,18,"offence.  (d) A, intending to cause a theft to be committed,",0.0365,0.0150,-0.0074,0.0587,0.0075,0.0289,0.0055,0.0106,...,0.0229,1.000
+bns::30,17,igates B to murder C. B refuses to do so. A is guilty of abe,0.0458,0.0294,-0.0051,0.0435,-0.0010,0.0205,-0.0081,0.0079,...,0.0177,1.000
+bns::31,18,"offence.  (d) A, intending to cause a theft to be committed,",0.0365,0.0149,-0.0075,0.0588,0.0075,0.0289,0.0055,0.0106,...,0.0229,1.000
 bns::32,18,offence defined in this section and is liable to the punishm,0.0245,0.0268,0.0069,0.0707,-0.0197,0.0208,0.0110,-0.0011,...,0.0177,1.000
 bns::33,19,poison to Z in A's absence and thereby causes Z's death. Her,0.0614,0.0291,-0.0139,0.0520,-0.0049,0.0238,0.0110,0.0111,...,0.0129,1.000
 bns::34,19,instigates B and C to break into an inhabited house at midni,0.0570,0.0326,0.0040,0.0548,-0.0226,0.0235,0.0026,0.0012,...,0.0300,1.000
@@ -41,12 +41,12 @@ bns::38,21,"design shall,-  (a) if the offence be committed, be punished",0.0584
 bns::39,22,"longest term of such imprisonment, or with such fine as is p",0.0267,0.0097,0.0228,0.0166,-0.0197,0.0228,-0.0168,0.0009,...,0.0130,1.000
 bns::40,22,"for that offence, or with such fine as is provided for the o",0.0416,0.0515,-0.0025,0.0454,-0.0188,-0.0123,-0.0120,-0.0032,...,0.0044,1.000
 bns::41,23,husband and that her consent is given because she believes t,0.0145,0.0275,0.0255,0.0605,-0.0140,-0.0027,-0.0125,-0.0264,...,0.0066,1.000
-bns::42,24,of a police officer subordinate to such police officer; or (,0.0167,0.0176,0.0200,0.0497,-0.0035,0.0106,-0.0030,-0.0465,...,-0.0047,1.000
+bns::42,24,of a police officer subordinate to such police officer; or (,0.0166,0.0176,0.0200,0.0497,-0.0035,0.0106,-0.0030,-0.0465,...,-0.0047,1.000
 bns::43,24,"being in force, including the paramilitary forces and any au",0.0270,0.0203,0.0372,0.0445,-0.0195,0.0049,0.0058,-0.0316,...,0.0003,1.000
 bns::44,25,of such commission inflicts an injury which causes the death,0.0416,0.0214,0.0326,0.0458,-0.0255,0.0339,0.0017,-0.0234,...,0.0147,1.001
 bns::45,25,"63.  *Explanation 2.*-For the purposes of this section, *Exp",0.0301,0.0237,0.0157,0.0365,-0.0071,0.0095,-0.0038,-0.0345,...,0.0096,1.000
-bns::46,26,woman under eighteen years of age is raped by one or more pe,0.0518,0.0179,0.0127,0.0493,-0.0157,-0.0107,-0.0212,-0.0227,...,0.0092,1.000
-bns::47,26,"the victim is dead or a child or of unsound mind, by, or wit",0.0576,0.0310,0.0027,0.0296,-0.0020,-0.0040,0.0006,-0.0257,...,-0.0112,1.000
+bns::46,26,woman under eighteen years of age is raped by one or more pe,0.0518,0.0179,0.0127,0.0493,-0.0157,-0.0107,-0.0212,-0.0228,...,0.0092,1.000
+bns::47,26,"the victim is dead or a child or of unsound mind, by, or wit",0.0576,0.0310,0.0027,0.0296,-0.0019,-0.0040,0.0006,-0.0257,...,-0.0112,1.000
 bns::48,27,"fine, or with both.  (3) Any man who commits the offence spe",0.0464,0.0214,0.0154,0.0235,-0.0003,-0.0001,-0.0057,-0.0306,...,0.0055,1.000
 bns::49,28,"ents to the capture of the images or any act, but not to the",0.0468,0.0518,-0.0224,0.0279,-0.0429,0.0167,-0.0085,-0.0296,...,-0.0094,1.000
 bns::50,28,1)** Where the death of a woman is caused by any burns or bo,0.0324,0.0513,0.0054,0.0487,-0.0436,0.0237,-0.0106,-0.0335,...,0.0007,1.000
@@ -54,15 +54,15 @@ bns::51,29,"seven years, and shall not have been heard of by such person",0.0092
 bns::52,29,of the woman; or  (b) harassment of the woman where such har,0.0287,0.0479,0.0074,0.0583,-0.0254,0.0049,0.0025,-0.0258,...,-0.0073,1.000
 bns::53,30,"consent of the woman, whether the woman is quick with child ",0.0367,0.0613,-0.0081,0.0546,-0.0387,0.0042,-0.0037,-0.0267,...,0.0061,1.000
 bns::54,30,"likely to cause the death of a pregnant woman, does an act w",0.0380,0.0353,-0.0003,0.0532,-0.0131,-0.0132,-0.0037,-0.0074,...,0.0115,1.000
-bns::55,30,"of this section.  Procuration of child.  **96.** Whoever, by",0.0254,-0.0009,0.0265,0.0496,-0.0131,0.0049,-0.0338,0.0224,...,-0.0011,1.000
+bns::55,30,"of this section.  Procuration of child.  **96.** Whoever, by",0.0254,-0.0009,0.0264,0.0496,-0.0131,0.0049,-0.0338,0.0224,...,-0.0011,1.000
 bns::56,31,"of the community to which they belong or, where they belong ",0.0638,0.0367,0.0159,0.0677,-0.0021,0.0071,-0.0116,-0.0024,...,0.0072,1.000
 bns::57,31,"know it. A, intending to cause, or knowing it to be likely t",0.0570,0.0468,-0.0166,0.0624,0.0218,0.0008,-0.0268,0.0107,...,0.0041,1.000
 bns::58,32,injury to any person and the bodily injury intended to be in,0.0450,0.0600,-0.0194,0.0666,0.0077,0.0163,-0.0430,0.0034,...,-0.0084,1.000
-bns::59,32,"and sudden provocation, causes the death of the person who g",0.0482,0.0265,-0.0216,0.0309,-0.0254,0.0136,-0.0422,0.0064,...,-0.0101,1.000
+bns::59,32,"and sudden provocation, causes the death of the person who g",0.0482,0.0265,-0.0216,0.0309,-0.0253,0.0136,-0.0422,0.0064,...,-0.0101,1.000
 bns::60,33,"right of private defence, lays hold of A to prevent him from",0.0621,0.0532,-0.0179,0.0526,0.0081,0.0077,-0.0400,0.0207,...,-0.0139,1.000
 bns::61,33,in the heat of passion upon a sudden quarrel and without the,0.0451,0.0333,-0.0062,0.0463,-0.0128,0.0000,-0.0302,-0.0101,...,-0.0185,0.999
 bns::62,34,amounting to murder.  **105.** Whoever commits culpable homi,0.0355,0.0307,0.0165,0.0581,-0.0103,0.0207,0.0010,-0.0018,...,0.0173,1.000
-bns::63,34,"unsound mind, any delirious person or any person in a state ",0.0390,0.0222,0.0129,0.0481,-0.0169,0.0360,-0.0140,0.0245,...,0.0079,1.000
+bns::63,34,"unsound mind, any delirious person or any person in a state ",0.0390,0.0222,0.0130,0.0481,-0.0169,0.0360,-0.0140,0.0244,...,0.0079,1.000
 bns::64,35,"such firing he wounds Z, he is liable to the punishment prov",0.0526,0.0323,0.0086,0.0371,0.0295,0.0314,0.0075,0.0247,...,0.0149,1.000
 bns::65,35,"sub-section,-  (i) ""organised crime syndicate"" means a group",0.0366,0.0056,0.0283,0.0090,0.0372,0.0343,-0.0072,-0.0118,...,0.0069,1.000
 bns::66,36,Any person who is a member of an organised crime syndicate s,0.0196,-0.0136,0.0136,0.0116,0.0088,0.0199,-0.0054,-0.0067,...,0.0052,1.000
@@ -109,11 +109,11 @@ bns::106,56,Whoever threatens to assault or attempts to obstruct any pub,0.0211,
 bns::107,57,"community,  shall be punished with imprisonment which may ex",0.0322,0.0352,0.0499,0.0341,-0.0044,0.0233,-0.0243,-0.0394,...,0.0094,1.000
 bns::108,57,APTER XII  ### OF OFFENCES BY OR RELATING TO PUBLIC SERVANTS,0.0301,0.0325,0.0161,0.0190,0.0087,0.0234,-0.0288,-0.0332,...,0.0258,1.000
 bns::109,58,for a term which shall not be less than six months but which,0.0034,0.0033,0.0309,0.0192,0.0094,0.0060,-0.0382,-0.0211,...,0.0096,1.000
-bns::110,58,"two years, or with fine, or with both; and the property, if ",0.0188,0.0366,0.0301,0.0166,-0.0001,0.0155,-0.0441,-0.0217,...,0.0038,1.000
+bns::110,58,"two years, or with fine, or with both; and the property, if ",0.0188,0.0366,0.0301,0.0165,-0.0002,0.0155,-0.0440,-0.0217,...,0.0038,0.999
 bns::111,59,"ten thousand rupees, or with both.  **207.** Whoever in any ",-0.0002,0.0396,0.0220,0.0348,-0.0156,0.0021,-0.0251,-0.0237,...,0.0141,1.000
 bns::112,59,"a term which may extend to six months, or with fine which ma",0.0109,0.0444,0.0288,0.0262,-0.0069,0.0213,-0.0110,-0.0173,...,0.0105,1.000
 bns::113,60,"thousand rupees, or with both.  *Illustration.*  A, being le",0.0117,0.0257,-0.0013,0.0561,-0.0044,0.0220,-0.0041,-0.0192,...,0.0350,0.999
-bns::114,60,"the commission of an offence, or in order to the apprehensio",0.0208,0.0360,-0.0054,0.0515,-0.0047,0.0262,-0.0201,-0.0349,...,0.0275,1.000
+bns::114,60,"the commission of an offence, or in order to the apprehensio",0.0207,0.0360,-0.0054,0.0515,-0.0047,0.0261,-0.0201,-0.0349,...,0.0275,1.000
 bns::115,61,"an oath or affirmation to state the truth, when required so ",0.0107,0.0313,0.0077,0.0490,-0.0087,0.0127,-0.0502,-0.0549,...,0.0154,1.000
 bns::116,61,"thereby cause, such public servant-  False information, with",0.0152,-0.0001,-0.0019,0.0352,-0.0050,0.0004,-0.0463,-0.0254,...,0.0171,1.000
 bns::117,62,"with fine which may extend to ten thousand rupees, or with b",0.0149,0.0214,0.0228,0.0465,-0.0013,0.0080,-0.0332,-0.0539,...,0.0132,1.000
@@ -131,22 +131,22 @@ bns::128,68,"B, who has no just claim against him, in order that B, eithe",0.051
 bns::129,68,imprisonment of either description for a term which may exte,0.0148,0.0246,0.0159,0.0557,-0.0060,0.0067,-0.0073,-0.0023,...,0.0213,1.000
 bns::130,69,to any case in which the harbour or concealment is by the sp,0.0140,0.0273,0.0131,0.0530,-0.0041,0.0021,-0.0268,0.0239,...,0.0267,1.000
 bns::131,69,"offender.  (a) if the offence is punishable with death, be p",0.0043,0.0333,0.0267,0.0294,0.0048,-0.0006,-0.0268,-0.0183,...,0.0021,1.000
-bns::132,70,offence for which the person was in custody or is ordered to,0.0256,0.0358,0.0148,0.0529,-0.0201,0.0111,-0.0134,-0.0120,...,0.0083,1.000
-bns::133,70,fine.  *Explanation.*-For the purposes of this section it is,0.0341,0.0287,0.0165,0.0330,0.0150,0.0138,-0.0310,-0.0141,...,0.0170,1.000
-bns::134,71,"judicial proceeding, any report, order, verdict, or decision",0.0042,0.0359,0.0273,0.0190,-0.0106,0.0361,-0.0166,-0.0191,...,0.0024,1.000
+bns::132,70,offence for which the person was in custody or is ordered to,0.0257,0.0357,0.0148,0.0530,-0.0201,0.0111,-0.0133,-0.0120,...,0.0082,1.000
+bns::133,70,fine.  *Explanation.*-For the purposes of this section it is,0.0341,0.0286,0.0164,0.0330,0.0150,0.0138,-0.0310,-0.0141,...,0.0170,1.000
+bns::134,71,"judicial proceeding, any report, order, verdict, or decision",0.0041,0.0359,0.0273,0.0190,-0.0106,0.0361,-0.0165,-0.0191,...,0.0024,1.000
 bns::135,71,with imprisonment for a term less than ten years.  **260.** ,0.0129,0.0328,0.0580,0.0229,-0.0127,0.0259,-0.0238,-0.0183,...,0.0078,1.000
 bns::136,72,such public servant to keep in confinement any person charge,0.0161,0.0208,0.0499,0.0352,-0.0079,0.0052,-0.0264,-0.0244,...,0.0168,1.000
 bns::137,72,", shall be punished with imprisonment of either description ",0.0220,0.0320,0.0546,0.0377,-0.0004,0.0116,-0.0168,-0.0102,...,0.0103,1.000
 bns::138,73,of either description for a term which may extend to six mon,0.0383,0.0336,0.0212,0.0537,-0.0039,0.0219,-0.0304,-0.0440,...,0.0284,1.000
-bns::139,73,of the bond.  ## CHAPTER XV  ### OF OFFENCES AFFECTING THE P,0.0377,0.0219,0.0210,0.0583,-0.0173,0.0103,-0.0395,-0.0384,...,0.0217,1.000
+bns::139,73,of the bond.  ## CHAPTER XV  ### OF OFFENCES AFFECTING THE P,0.0377,0.0219,0.0210,0.0583,-0.0172,0.0103,-0.0395,-0.0384,...,0.0218,1.000
 bns::140,74,"has reason to believe to be, likely to spread the infection ",-0.0134,-0.0048,0.0166,0.0645,-0.0184,0.0066,-0.0276,-0.0138,...,0.0234,1.000
 bns::141,74,"description for a term which may extend to one year, or with",-0.0127,0.0220,0.0363,0.0426,0.0001,0.0055,-0.0252,-0.0247,...,0.0263,1.000
 bns::142,75,of either description for a term which may extend to six mon,0.0068,0.0292,0.0356,0.0369,0.0091,0.0074,-0.0257,-0.0419,...,0.0112,1.000
-bns::143,75,"with fine which may extend to five thousand rupees, or with ",0.0219,0.0301,0.0359,0.0346,0.0108,0.0181,-0.0420,-0.0374,...,0.0074,0.999
+bns::143,75,"with fine which may extend to five thousand rupees, or with ",0.0219,0.0301,0.0359,0.0346,0.0107,0.0181,-0.0420,-0.0375,...,0.0074,0.999
 bns::144,75,"part thereof, shall be punished with imprisonment of either ",0.0493,0.0267,0.0010,0.0356,0.0099,0.0125,-0.0366,-0.0317,...,0.0005,1.000
 bns::145,76,any content in electronic form shall be deemed to be obscene,0.0483,0.0039,-0.0177,0.0109,0.0236,0.0023,-0.0310,-0.0094,...,0.0027,1.000
-bns::146,76,either description for a term which may extend to five years,0.0147,0.0033,0.0146,0.0190,-0.0005,0.0147,-0.0184,-0.0215,...,0.0101,1.000
-bns::147,77,"may extend to three months, or with fine which may extend to",0.0144,0.0180,0.0533,0.0370,-0.0160,0.0147,-0.0329,-0.0387,...,0.0158,1.000
+bns::146,76,either description for a term which may extend to five years,0.0147,0.0033,0.0146,0.0190,-0.0005,0.0147,-0.0184,-0.0216,...,0.0101,1.000
+bns::147,77,"may extend to three months, or with fine which may extend to",0.0144,0.0180,0.0533,0.0371,-0.0161,0.0147,-0.0329,-0.0387,...,0.0157,1.000
 bns::148,77,** Whoever voluntarily causes disturbance to any assembly la,0.0435,0.0413,0.0215,0.0472,0.0031,0.0258,-0.0376,-0.0310,...,0.0079,1.000
 bns::149,78,the subject of theft; but it becomes capable of being the su,0.0467,0.0247,-0.0069,0.0204,0.0222,0.0056,-0.0258,0.0178,...,0.0108,1.000
 bns::150,78,"s his plate to A, the keeper of a warehouse, till Z shall re",0.0419,0.0490,0.0051,0.0116,0.0235,-0.0127,-0.0261,-0.0075,...,0.0096,1.000
@@ -158,11 +158,11 @@ bns::155,81,"in fear of an accusation, against that person or any other, ",0.020
 bns::156,81,"restraint.  #### *Illustrations.*  (a) A holds Z down, and f",0.0408,0.0271,-0.0036,0.0616,-0.0215,0.0192,-0.0171,0.0351,...,0.0081,1.000
 bns::157,82,"commit such robbery, shall be punished with imprisonment for",0.0399,0.0263,-0.0035,0.0540,0.0044,0.0173,-0.0137,-0.0059,...,0.0180,1.000
 bns::158,82,"person, or attempts to cause death or grievous hurt to any p",0.0610,0.0241,-0.0076,0.0450,0.0145,0.0182,-0.0166,-0.0089,...,0.0305,1.000
-bns::159,83,". A takes the horse out of B's possession, intending to use ",0.0477,0.0107,-0.0211,0.0534,0.0411,-0.0294,-0.0473,-0.0016,...,0.0008,1.000
+bns::159,83,". A takes the horse out of B's possession, intending to use ",0.0476,0.0107,-0.0211,0.0533,0.0411,-0.0294,-0.0472,-0.0016,...,0.0008,0.999
 bns::160,83,committed the offence defined in this section.  (b) A finds ,0.0762,0.0431,-0.0103,0.0383,0.0356,0.0037,-0.0286,0.0088,...,0.0135,0.999
 bns::161,84,ation.*  Z dies in possession of furniture and money. His se,0.0562,0.0246,-0.0033,0.0535,0.0487,0.0187,-0.0209,0.0198,...,0.0088,1.000
-bns::162,84,such contribution to the said Fund in violation of the said ,0.0571,0.0118,0.0154,0.0488,0.0434,-0.0015,-0.0275,0.0014,...,0.0184,1.000
-bns::163,85,the public money which he holds. A dishonestly appropriates ,0.0517,0.0198,0.0195,0.0467,0.0407,-0.0002,-0.0238,-0.0123,...,0.0144,1.000
+bns::162,84,such contribution to the said Fund in violation of the said ,0.0572,0.0118,0.0153,0.0488,0.0434,-0.0015,-0.0275,0.0014,...,0.0184,1.000
+bns::163,85,the public money which he holds. A dishonestly appropriates ,0.0517,0.0198,0.0195,0.0467,0.0408,-0.0001,-0.0238,-0.0123,...,0.0143,1.000
 bns::164,85,"has been committed, within or without India, but, if such pr",0.0511,-0.0021,-0.0035,0.0722,0.0472,0.0435,-0.0374,-0.0129,...,0.0281,1.000
 bns::165,86,", and which act or omission causes or is likely to cause dam",0.0451,0.0001,0.0036,0.0737,0.0295,0.0278,-0.0346,-0.0120,...,0.0325,1.000
 bns::166,86,"to deliver the indigo plant, and afterwards breaks his contr",0.0222,0.0117,0.0123,0.0579,0.0005,0.0100,-0.0159,-0.0121,...,0.0236,1.000
@@ -182,7 +182,7 @@ bns::179,93,"A is guilty of forgery.  (f) Z's will contains these words-""",0.07
 bns::180,94,an express or implied contract for service.  *Explanation 1.,0.0435,0.0130,0.0060,0.0154,0.0027,-0.0159,-0.0712,-0.0294,...,0.0157,1.001
 bns::181,94,made before A was on the point of insolvency. A has committe,0.0529,-0.0040,0.0156,0.0124,0.0273,-0.0008,-0.0379,-0.0214,...,0.0315,1.000
 bns::182,95,"that purpose, shall be punished with imprisonment of either ",0.0347,0.0538,0.0325,0.0112,0.0328,0.0097,-0.0241,-0.0156,...,0.0156,1.000
-bns::183,95,"used as genuine, shall, if the document or electronic record",0.0302,0.0306,0.0288,0.0074,0.0272,0.0050,-0.0296,-0.0273,...,0.0177,1.000
+bns::183,95,"used as genuine, shall, if the document or electronic record",0.0302,0.0305,0.0288,0.0074,0.0272,0.0050,-0.0296,-0.0273,...,0.0177,1.000
 bns::184,95,"fine.  (3) Whoever possesses any seal, plate or other instru",0.0325,0.0348,0.0252,0.0174,0.0178,0.0054,-0.0295,-0.0254,...,0.0137,1.000
 bns::185,96,giving the appearance of authenticity to any document then f,0.0405,0.0697,0.0229,0.0266,0.0002,0.0173,-0.0396,-0.0327,...,0.0083,1.000
 bns::186,96,shall be sufficient in any charge under this section to alle,0.0381,0.0528,0.0361,0.0334,0.0098,0.0434,-0.0315,-0.0442,...,0.0126,1.000
@@ -194,6 +194,6 @@ bns::191,99,person to believe that he will be rendered an object of Divi,0.0671,
 bns::192,99,"form of an alternative or expressed ironically, may amount t",0.0617,0.0173,-0.0147,0.0676,0.0264,-0.0247,-0.0567,-0.0221,...,0.0053,1.000
 bns::193,100,It is not defamation in A to express in good faith any opini,0.0840,0.0213,-0.0034,0.0541,0.0468,-0.0181,-0.0717,-0.0180,...,-0.0184,1.000
 bns::194,100,"so far as his character appears in such performance, and no ",0.0643,0.0050,-0.0104,0.0548,0.0305,-0.0206,-0.0476,-0.0179,...,-0.0177,1.001
-bns::195,101,pupil in the presence of other pupils; a master censuring a ,0.0371,0.0194,0.0079,0.0489,0.0197,0.0003,-0.0636,0.0106,...,-0.0213,1.000
+bns::195,101,pupil in the presence of other pupils; a master censuring a ,0.0370,0.0194,0.0079,0.0489,0.0197,0.0003,-0.0637,0.0106,...,-0.0213,1.000
 bns::196,101,be punished with simple imprisonment for a term which may ex,0.0659,0.0397,0.0174,0.0303,-0.0122,0.0134,-0.0577,-0.0199,...,-0.0048,0.999
 bns::197,102,"in respect of any such penalty, or punishment; or  (e) any p",0.0568,0.0366,0.0086,0.0374,-0.0027,0.0590,-0.0105,-0.0278,...,0.0145,1.000

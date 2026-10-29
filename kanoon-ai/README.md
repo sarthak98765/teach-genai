@@ -10,8 +10,10 @@ The project grows one class at a time (plan: `../rag-days-09-14.md`).
 |---|---|
 | **09** | `data_ingestion/`: PDF → Mistral OCR → cleaning → fixed-size chunks |
 | **10** | `indexing.py`: chunks → OpenAI embeddings → Qdrant (local), search with an Act filter |
-| 11–12 | hybrid search, reranking, answers with citations, `/ask` API |
-| 13–14 | evals and observability |
+| **11** | `retrieval.py`: question → top 5 chunks from Qdrant → answer that cites them (`[S1]`); `prompts.py`, `config.py` |
+| 12 | hybrid search (BM25 + vectors) |
+| 13 | reranker |
+| 14 | evals and observability |
 
 ## Run
 
@@ -26,6 +28,38 @@ python indexing.py bns          # runs extraction -> cleaning -> chunking -> ind
 
 Each step can also run alone (`python data_extraction.py bns`, `python cleaning.py bns`, `python chunking.py bns`) and reads the step before it.
 OCR costs money, so its result is cached: delete `data/ocr/bns.json` to OCR again.
+
+Then ask a question (from `kanoon-ai/`, after indexing):
+
+```bash
+cd ..                           # back to kanoon-ai/
+python retrieval.py "What is the punishment for murder?"
+```
+
+## Retrieval (Day 11)
+
+| File | Job |
+|---|---|
+| `config.py` | chat model, `TOP_K = 5`, the fixed replies; keys, Qdrant and embedding model come from `data_ingestion/config.py` |
+| `prompts.py` | `SYSTEM_PROMPT` (role, guardrails, instructions, citations, response format, example) and `USER_PROMPT` (`<sources>` + `<question>`) |
+| `retrieval.py` | `retrieve(query, act_id, k)` → top-k chunks; `build_context()` → numbered `<source id="S1">` blocks; `generate_answer()`; `ask()` does all three |
+
+| `app.py` | FastAPI: `POST /chat` streams the answer, `POST /answer` returns it whole, `GET /health` |
+| `run.sh` | starts the API: gunicorn, 1 uvicorn worker (local Qdrant allows one process), port 8000; activates `../.venv` if needed |
+| `test.py` | talk to the running API from the terminal |
+
+```bash
+cd kanoon-ai
+sh run.sh                                         # terminal 1: the API on port 8000 (docs at http://localhost:8000/docs)
+python test.py                                    # terminal 2: live chat, streamed; or
+python test.py "What is the punishment for murder?"   # one full answer from /answer
+```
+
+- **`POST /chat`** takes `{"chat": [{"role": "user", "content": "..."}], "act_id": "bns"}` (`act_id` is optional) and streams one JSON object per line: first `{"role": "sources", ...}`, then `{"role": "assistant", "content": "<piece of text>"}` as the model writes, or `{"role": "error", ...}`. The last 6 messages are sent to the model as history.
+- **`POST /answer`** takes `{"question": "...", "act_id": "bns"}` and returns `{"answer": "...", "sources": [...]}`.
+- Search uses only the **last** message, so a follow-up like "and what is the punishment?" finds the wrong chunks (Day 08's `rewrite_question()` fixes this).
+
+Qdrant local mode allows one process at a time: run either `retrieval.py` or the API, and stop any notebook that has `data/qdrant` open first.
 
 ## `data_ingestion/`
 
