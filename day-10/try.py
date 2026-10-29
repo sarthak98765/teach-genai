@@ -94,3 +94,45 @@ thinking (reasonign) -> ltency
 generation (throughput)
 
 < 10 seconds
+
+
+
+day 10 -> embeddings, indexing(HNSW), vectordb
+day 11 -> retireval (chatbot)
+day 12-> hybrid (vector + bm25 search)
+day 13 -> re-ranking
+day 14 -> evals and observaibility
+
+
+1. Qdrant
+2. Pinecone
+3. Weaviate
+
+
+
+
+query -> user query -> LLM
+1. re-write
+2. multi-qeury
+3. hyde
+
+what is the crime of killing? -> LLM (system prompt)-> query re-write 
+
+query = what is fees of iit delhi in 2026? -> llm -> 3 multiple queries -> 5
+
+query 1= what is the tution fees of iit delhi in 2026 -> 5 
+query 2 = what is the hostel fees of iit delhi in 2026 -> 5
+query 3 = what is the total fees of iit dlehi in 2026 -> 5
+
+15 -> de-duplication -> 12 -> re-ranker -> top 5
+
+
+temperature - entropy (cretivaness)
+top_k -> top chunks 
+top_p -> threshold (top probability) -> 0.8 
+
+cost reduce ->> LLM model
+latency reduce
+answer performance increase
+
+recall@k, precision@k
