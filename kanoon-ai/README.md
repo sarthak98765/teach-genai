@@ -11,7 +11,7 @@ The project grows one class at a time (plan: `../rag-days-09-14.md`).
 | **09** | `data_ingestion/`: PDF → Mistral OCR → cleaning → fixed-size chunks |
 | **10** | `indexing.py`: chunks → OpenAI embeddings → Qdrant (local), search with an Act filter |
 | **11** | `retrieval.py`: question → top 5 chunks from Qdrant → answer that cites them (`[S1]`); `prompts.py`, `config.py` |
-| 12 | hybrid search (BM25 + vectors) |
+| **12** | `bm25_search.py`: BM25 keyword index (build, save, load, search); `retrieve()` = 3 vector + 2 BM25 chunks |
 | 13 | reranker |
 | 14 | evals and observability |
 
@@ -24,7 +24,11 @@ uv pip install -r kanoon-ai/requirements.txt
 cp kanoon-ai/data_ingestion/.env.example kanoon-ai/data_ingestion/.env   # then add MISTRAL_API_KEY and OPENAI_API_KEY
 cd kanoon-ai/data_ingestion
 python indexing.py bns          # runs extraction -> cleaning -> chunking -> indexing; or: python indexing.py (every Act)
+cd ..                           # back to kanoon-ai/
+python bm25_search.py           # BM25 index of every Act's chunks -> data_ingestion/data/bm25/kanoon_bm25.pkl
 ```
+
+Re-run `python bm25_search.py` after re-chunking an Act, so the keyword index matches the chunks.
 
 Each step can also run alone (`python data_extraction.py bns`, `python cleaning.py bns`, `python chunking.py bns`) and reads the step before it.
 OCR costs money, so its result is cached: delete `data/ocr/bns.json` to OCR again.
@@ -32,7 +36,6 @@ OCR costs money, so its result is cached: delete `data/ocr/bns.json` to OCR agai
 Then ask a question (from `kanoon-ai/`, after indexing):
 
 ```bash
-cd ..                           # back to kanoon-ai/
 python retrieval.py "What is the punishment for murder?"
 ```
 
@@ -40,9 +43,9 @@ python retrieval.py "What is the punishment for murder?"
 
 | File | Job |
 |---|---|
-| `config.py` | chat model, `TOP_K = 5`, the fixed replies; keys, Qdrant and embedding model come from `data_ingestion/config.py` |
+| `config.py` | chat model, `VECTOR_TOP_K = 3` and `BM25_TOP_K = 2`, the fixed replies; keys, Qdrant and embedding model come from `data_ingestion/config.py` |
 | `prompts.py` | `SYSTEM_PROMPT` (role, guardrails, instructions, citations, response format, example) and `USER_PROMPT` (`<sources>` + `<question>`) |
-| `retrieval.py` | `retrieve(query, act_id, k)` → top-k chunks; `build_context()` → numbered `<source id="S1">` blocks; `generate_answer()`; `ask()` does all three |
+| `retrieval.py` | `retrieve(query, act_id)` → hybrid search, 5 chunks (below); `build_context()` → numbered `<source id="S1">` blocks; `generate_answer()`; `ask()` does all three |
 
 | `app.py` | FastAPI: `POST /chat` streams the answer, `POST /answer` returns it whole, `GET /health` |
 | `run.sh` | starts the API: gunicorn, 1 uvicorn worker (local Qdrant allows one process), port 8000; activates `../.venv` if needed |
@@ -60,6 +63,33 @@ python test.py "What is the punishment for murder?"   # one full answer from /an
 - Search uses only the **last** message, so a follow-up like "and what is the punishment?" finds the wrong chunks (Day 08's `rewrite_question()` fixes this).
 
 Qdrant local mode allows one process at a time: run either `retrieval.py` or the API, and stop any notebook that has `data/qdrant` open first.
+
+## Hybrid search (Day 12)
+
+Vector search finds meaning but misses exact words: for "What does Section 103 say?" it returns pages 3–4, never Section 103. BM25 (keyword search) finds the exact `103`. `retrieve()` uses both:
+
+| Function | Job |
+|---|---|
+| `bm25_search.py` `tokenize()` | text → lowercase words and numbers |
+| `bm25_text()` | what BM25 indexes: `Section 102 Section 103 …` (every section that starts in the chunk, from `**103.**`) + the chunk text, so the section itself beats chunks that only mention 103 |
+| `build_bm25_index(act_ids)` | every Act's `data/chunks/<act>.jsonl` → one `BM25Okapi` index + the chunks |
+| `save_bm25_index()` / `load_bm25_index()` | pickle to / from `data_ingestion/data/bm25/kanoon_bm25.pkl` (our own file only: loading a pickle runs code) |
+| `bm25_search(index, query, act_id, k)` | top-k by keywords, filtered by Act; score 0 = no shared word, not a hit |
+| `retrieval.py` `vector_retrieve()` | top 3 from Qdrant (meaning) |
+| `bm25_retrieve()` | top BM25 hits |
+| `retrieve()` | the 3 vector chunks, then the 2 best BM25 chunks that vector search didn't already find → `S1`…`S5`; each chunk has `found_by` |
+
+```
+retrieve | S1 bns::5 (page 4, vector score 0.393)
+retrieve | S2 bns::3 (page 3, vector score 0.385)
+retrieve | S3 bns::6 (page 4, vector score 0.376)
+retrieve | S4 bns::61 (page 33, bm25 score 7.147)      <- Section 103, found by keywords
+retrieve | S5 bns::159 (page 83, bm25 score 6.583)
+```
+
+- Fixed slots (3 + 2) are simple and always give both kinds a place. The Day 12 notebook also shows **RRF**, which ranks one merged list instead.
+- Vector scores (0–1) and BM25 scores (no fixed range) can't be compared: the two lists are kept side by side, not sorted together.
+- One BM25 index for every Act, filtered by `act` like Qdrant. It lives in memory: `load_bm25_index()` runs once when `retrieval.py` is imported.
 
 ## `data_ingestion/`
 

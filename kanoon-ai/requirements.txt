@@ -3,6 +3,7 @@ mistralai
 openai
 python-dotenv
 qdrant-client
+rank-bm25
 tiktoken
 fastapi
 uvicorn

@@ -18,6 +18,7 @@ CLEAN_DIR = DATA_DIR / "cleaned"    # cleaned pages
 CHUNKS_DIR = DATA_DIR / "chunks"    # final chunks
 EMBEDDINGS_DIR = DATA_DIR / "embeddings"  # vectors saved to disk, to inspect without Qdrant
 QDRANT_DIR = DATA_DIR / "qdrant"    # vector DB (Qdrant local mode)
+BM25_DIR = DATA_DIR / "bm25"        # keyword index (BM25), one file for every Act
 
 # One entry per Act. `url` is where we download from, `official` is the page we cite,
 # `as_of` is the date of the text we index.

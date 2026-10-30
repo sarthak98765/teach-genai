@@ -31,7 +31,7 @@ app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], all
 
 def to_sources(chunks: List[Dict]) -> List[Dict]:
     """What the UI shows under an answer: which [S1] is which page, with the official link."""
-    return [{k: c[k] for k in ("source", "chunk_id", "act", "page", "score", "source_url")} for c in chunks]
+    return [{k: c[k] for k in ("source", "chunk_id", "act", "page", "score", "found_by", "source_url")} for c in chunks]
 
 @app.get("/health")
 def health():
