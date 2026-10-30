@@ -12,7 +12,7 @@ TIMEOUT = 120
 
 def print_sources(sources):
     for s in sources:
-        print(f"   [{s['source']}] {s['chunk_id']}, page {s['page']} (score {s['score']:.3f})")
+        print(f"   [{s['source']}] {s['chunk_id']}, page {s['page']} ({s.get('found_by', '')} score {s['score']:.3f})")
 
 def answer(question):
     response = httpx.post(f"{URL}/answer", json={"question": question}, timeout=TIMEOUT)
